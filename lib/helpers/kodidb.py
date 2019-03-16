@@ -432,7 +432,7 @@ class KodiDb(object):
                     infolabels["lastplayed"] = item["lastplayed"]
 
             # setting the dbtype and dbid is supported from kodi krypton and up
-            if KODI_VERSION > 16 and item["type"] not in ["recording", "channel", "favourite"]:
+            if KODI_VERSION > 16 and item["type"] not in ["recording", "channel", "favourite", "genre", "categorie"]:
                 infolabels["mediatype"] = item["type"]
                 # setting the dbid on music items is not supported ?
                 if nodetype == "Video" and "DBID" in item["extraproperties"]:
